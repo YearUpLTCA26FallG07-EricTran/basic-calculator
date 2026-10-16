@@ -18,16 +18,29 @@ public class BasicCalculator {
         System.out.println("    (M)ultiply");
         System.out.println("    (D)ivide");
         System.out.println("Please select an option: ");
+        String option = scanner.next();
 
         // calculate the results
-        int result = num1 * num2;
+        int result = 0;
+        String operator = "";
 
-        //display output
-        System.out.println(num1 + " * " + num2 + " = " + result);
+        if(option.equalsIgnoreCase("A")) {
+            result = num1 + num2;
+            System.out.println(num1 + " + " + num2 + " = " + result);
+
+        } else if(option.equalsIgnoreCase("S")) {
+            result = num1 - num2;
+            System.out.println(num1 + " - " + num2 + " = " + result);
+
+        } else if(option.equalsIgnoreCase("M")) {
+            result = num1 * num2;
+            System.out.println(num1 + " * " + num2 + " = " + result);
+
+        } else if (option.equalsIgnoreCase("D")) {
+            result = num1 / num2;
+                        System.out.println(num1 + " / " + num2 + " = " + result);
+                        }
+                    }
+                }
 
 
-
-
-    }
-
-}
